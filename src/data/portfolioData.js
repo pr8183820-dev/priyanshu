@@ -19,7 +19,7 @@ export const personalInfo = {
   availability: "Available for Freelance & Full-time Roles",
   statusBadge: "Open to exciting opportunities",
   resumeUrl: "#", // Add link to your PDF resume (e.g., "/resume.pdf" in public folder)
-  avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600", // Or your photo path
+  avatar: "/priyanshu.jpg",
   yearsOfExperience: "2+",
 };
 
@@ -284,4 +284,3 @@ export const faqs = [
     answer: "Send me a message with your project requirements or idea. We will schedule a quick introductory chat to discuss timelines, tech stack, and milestones."
   }
 ];
-

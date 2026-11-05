@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Mail, FileText, Sparkles, Terminal, Code2, CheckCircle2 } from 'lucide-react';
+import { ArrowDown, Mail, FileText } from 'lucide-react';
 import { personalInfo, heroStats } from '../../data/portfolioData';
 
 export const Hero = () => {
@@ -89,70 +89,12 @@ export const Hero = () => {
               {/* Background Ambient Glow Behind Card */}
               <div className="absolute -inset-1.5 bg-gradient-to-r from-teal-500 to-indigo-600 rounded-3xl blur-2xl opacity-25 group-hover:opacity-40 transition duration-1000"></div>
 
-              {/* IDE / Terminal Style Card */}
-              <div className="relative rounded-2xl bg-slate-950/90 border border-slate-800/90 shadow-2xl backdrop-blur-xl overflow-hidden">
-                {/* Header Bar */}
-                <div className="flex items-center justify-between px-4 py-3 bg-slate-900/80 border-b border-slate-800">
-                  <div className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-rose-500/80 inline-block" />
-                    <span className="w-3 h-3 rounded-full bg-amber-500/80 inline-block" />
-                    <span className="w-3 h-3 rounded-full bg-emerald-500/80 inline-block" />
-                  </div>
-                  <div className="flex items-center gap-1.5 text-xs text-slate-400 font-mono">
-                    <Terminal className="w-3.5 h-3.5 text-teal-400" />
-                    <span>developer.json</span>
-                  </div>
-                  <span className="w-8" />
-                </div>
-
-                {/* Code Body */}
-                <div className="p-5 font-mono text-xs sm:text-sm text-slate-300 space-y-2 overflow-x-auto">
-                  <p className="text-slate-500">// Welcome to my developer portfolio</p>
-                  <p>
-                    <span className="text-teal-400 font-semibold">const</span>{' '}
-                    <span className="text-indigo-300">developer</span> = {'{'}
-                  </p>
-                  <p className="pl-4">
-                    <span className="text-slate-400">name:</span>{' '}
-                    <span className="text-amber-300">"{personalInfo.name}"</span>,
-                  </p>
-                  <p className="pl-4">
-                    <span className="text-slate-400">title:</span>{' '}
-                    <span className="text-amber-300">"{personalInfo.role}"</span>,
-                  </p>
-                  <p className="pl-4">
-                    <span className="text-slate-400">location:</span>{' '}
-                    <span className="text-amber-300">"{personalInfo.location}"</span>,
-                  </p>
-                  <p className="pl-4">
-                    <span className="text-slate-400">lovesCoding:</span>{' '}
-                    <span className="text-teal-400">true</span>,
-                  </p>
-                  <p className="pl-4">
-                    <span className="text-slate-400">coffeePowered:</span>{' '}
-                    <span className="text-teal-400">true</span>,
-                  </p>
-                  <p className="pl-4">
-                    <span className="text-slate-400">primarySkills:</span> [
-                  </p>
-                  <p className="pl-8 text-emerald-300">
-                    "React", "Node.js", "Express", "Tailwind"
-                  </p>
-                  <p className="pl-4">],</p>
-                  <p className="pl-4">
-                    <span className="text-slate-400">currentlyBuilding:</span>{' '}
-                    <span className="text-cyan-300">"Next-gen web products"</span>
-                  </p>
-                  <p>{'};'}</p>
-                </div>
-
-                {/* Card Footer Badge */}
-                <div className="px-5 py-3 bg-slate-900/50 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
-                  <span className="flex items-center gap-1.5 text-teal-400 font-medium">
-                    <CheckCircle2 className="w-3.5 h-3.5" /> Ready for deployment
-                  </span>
-                  <span className="text-slate-500 font-mono">UTF-8</span>
-                </div>
+              <div className="relative overflow-hidden rounded-2xl border border-slate-800/90 shadow-2xl">
+                <img
+                  src={personalInfo.avatar}
+                  alt={`${personalInfo.name} portrait`}
+                  className="aspect-[4/5] w-full object-cover object-[50%_42%]"
+                />
               </div>
             </div>
           </div>
@@ -182,4 +124,3 @@ export const Hero = () => {
     </section>
   );
 };
-
